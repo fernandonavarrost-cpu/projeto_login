@@ -1,2 +1,68 @@
 /* Import the Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Ubuntu&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal do login */
+.login-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Impede que o conteúdo transborde da tela e esconde a barra de rolagem */
+}
+
+/* Container esquerdo */
+.login-text {
+    display: flex; 
+    flex:1; /* Faz com que o container ocupe metade da tela */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    background-image: url("../images/bg.png"); /* Adiciona a imagem de fundo */
+    background-position:right; /* Posiciona a imagem à direita */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size: cover; /* Faz com que a imagem cubra todo o container */
+    height: 100vh; /* Garante que o container ocupe toda a altura da tela */
+    color: #ffffff; /* Define a cor do texto como branco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto para melhor legibilidade */
+    transition: background-position 1s; /* Adiciona uma transição suave para a mudança de fundo */
+}
+
+/* Estilização do texto de boas-vindas */
+.login-text-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.login-text-content span {
+    font-size: 18px;
+}
+
+/* Container direito */
+.login-form {
+    display: flex;
+    background-color: #ffffff;
+    flex:1; /* Faz com que o container ocupe metade da tela */
+    height: 100vh; /* Garante que o container ocupe toda a altura da tela */
+}
+
+/* Animação para o fundo */
+@keyframes slide {
+    0% {/* Define a posição inicial do fundo */
+        background-position: 0 0; 
+    }
+    100% { /* Define a posição final do fundo */
+        background-position: 100% 0;
+    }
+}
+
+.login-text {
+    animation: slide 30s linear; /* Adiciona uma animação de entrada suave. Slide significa que a imagem se move da esquerda para a direita. Linear significa que a animação ocorre a uma velocidade constante */
+}   
